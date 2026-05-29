@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+venv/
+sarsa/graphs/*.png
+sarsa/graphs/*.gif
