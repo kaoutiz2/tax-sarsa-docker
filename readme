@@ -1,0 +1,5 @@
+# construire l'image
+docker build -t taxi-sarsa .
+
+# Lancer l'entrainement 
+docker run --rm -v "$(pwd)/sarsa/graphs:/app/sarsa/graphs" taxi-sarsa

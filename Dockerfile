@@ -1,8 +1,5 @@
 FROM python:3.12-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends xvfb xauth \
-    && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 
 COPY requirements.txt .
@@ -16,5 +13,7 @@ WORKDIR /app/sarsa
 
 ENV HEADLESS=1
 ENV PYTHONUNBUFFERED=1
+ENV MPLBACKEND=Agg
+ENV REFRESH_EVERY=250
 
-CMD ["xvfb-run", "-a", "python", "main.py"]
+CMD ["python", "-u", "main.py"]
