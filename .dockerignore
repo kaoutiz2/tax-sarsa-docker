@@ -3,5 +3,9 @@ __pycache__/
 *.pyo
 .git/
 venv/
+.env
+*.env
+*.key
+*.pem
 sarsa/graphs/*.png
 sarsa/graphs/*.gif
